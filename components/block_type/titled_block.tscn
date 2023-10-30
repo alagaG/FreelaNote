@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsf3repjeue5m"]
+
+[ext_resource type="PackedScene" uid="uid://cn25noqitayy8" path="res://components/block_type/classic_block.tscn" id="1_5rm2s"]
+[ext_resource type="Script" path="res://components/block_type/titled_block.gd" id="2_bqme3"]
+
+[node name="TitledBlock" instance=ExtResource("1_5rm2s")]
+script = ExtResource("2_bqme3")
+title = ""
+alignment_x = 0
+alignment_y = 0
+block_size = Vector2i(16, 31)
+
+[node name="Panel" parent="." index="0"]
+offset_right = 16.0
+offset_bottom = 31.0
+
+[node name="VBox" type="VBoxContainer" parent="Panel/Margin" index="0"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/Margin/VBox" index="0"]
+layout_mode = 2
+
+[node name="TitleSeparator" type="HSeparator" parent="Panel/Margin/VBox" index="1"]
+layout_mode = 2

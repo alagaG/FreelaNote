@@ -2,17 +2,18 @@
 
 [ext_resource type="Script" path="res://block.gd" id="1_r7v8p"]
 
-[node name="Block" type="PanelContainer"]
+[node name="Block" type="Button"]
 custom_minimum_size = Vector2(160, 90)
 offset_right = 160.0
 offset_bottom = 90.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_r7v8p")
-title = "Title"
 
 [node name="Margin" type="MarginContainer" parent="."]
 layout_mode = 2
+offset_right = 160.0
+offset_bottom = 90.0
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5

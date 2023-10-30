@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn25noqitayy8"]
+
+[ext_resource type="Script" path="res://components/block_type/classic_block.gd" id="1_8fh1m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7ri8"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101961, 0.101961, 0.129412, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="ClassicBlock" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8fh1m")
+min_size = Vector2i(16, 16)
+block_size = Vector2i(16, 16)
+background = SubResource("StyleBoxFlat_x7ri8")
+
+[node name="Panel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+focus_mode = 1
+
+[node name="Margin" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
