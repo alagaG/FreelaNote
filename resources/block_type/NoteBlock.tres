@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BlockEntry" load_steps=3 format=3 uid="uid://btcte7iptpwa1"]
+
+[ext_resource type="PackedScene" uid="uid://c45287ormopw4" path="res://components/block_type/note_block.tscn" id="1_nlas0"]
+[ext_resource type="Script" path="res://code/resource/BlockEntry.gd" id="2_keyx2"]
+
+[resource]
+script = ExtResource("2_keyx2")
+name = "Note"
+scene = ExtResource("1_nlas0")

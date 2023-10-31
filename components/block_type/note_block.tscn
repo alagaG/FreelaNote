@@ -1,16 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://c45287ormopw4"]
+[gd_scene load_steps=4 format=3 uid="uid://c45287ormopw4"]
 
 [ext_resource type="PackedScene" uid="uid://bsf3repjeue5m" path="res://components/block_type/titled_block.tscn" id="1_77osx"]
 [ext_resource type="Script" path="res://components/block_type/note_block.gd" id="2_0r7lc"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l0f0u"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
 [node name="NoteBlock" instance=ExtResource("1_77osx")]
 script = ExtResource("2_0r7lc")
-note_text = "A"
-block_size = Vector2i(128, 80)
+note_text = ""
+min_size = Vector2i(80, 16)
+block_size = Vector2i(80, 45)
+margin_top = 5
+margin_down = 5
+margin_left = 5
+margin_right = 5
+background = SubResource("StyleBoxFlat_l0f0u")
 
 [node name="Panel" parent="." index="0"]
-offset_right = 128.0
-offset_bottom = 80.0
+custom_minimum_size = Vector2(80, 16)
+offset_bottom = 35.0
+
+[node name="Margin" parent="Panel" index="0"]
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
 
 [node name="VBox" parent="Panel/Margin" index="0"]
 theme_override_constants/separation = 0
@@ -18,5 +42,4 @@ theme_override_constants/separation = 0
 [node name="TextEdit" type="TextEdit" parent="Panel/Margin/VBox" index="2"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "A"
 wrap_mode = 1

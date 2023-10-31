@@ -14,6 +14,10 @@ config/name="Drag and Drop"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://code/autoload/global.gd"
+
 [debug]
 
 gdscript/warnings/native_method_override=1
